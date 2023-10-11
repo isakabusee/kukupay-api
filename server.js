@@ -19,7 +19,9 @@ mongoose.connect(process.env.MONGODB_URI).then(()=>{
 const app = express();
 
 // cors
-app.use(cors());
+app.use(cors({
+    origin: 'https://kukupay-ui-mquk2.ondigitalocean.app'
+  }));
 // to convert form data into json data in req.body 
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
