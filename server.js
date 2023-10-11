@@ -6,6 +6,7 @@ import seedRouter from './routes/seedRoutes.js';
 import productRouter from './routes/productRoutes.js';
 import userRouter from './routes/userRoutes.js';
 import orderRouter from './routes/orderRoutes.js';
+import cors from 'cors';
 
 dotenv.config();
 
@@ -17,6 +18,8 @@ mongoose.connect(process.env.MONGODB_URI).then(()=>{
 
 const app = express();
 
+// cors
+app.use(cors());
 // to convert form data into json data in req.body 
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
