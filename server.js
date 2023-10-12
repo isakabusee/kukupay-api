@@ -6,7 +6,7 @@ import seedRouter from "./routes/seedRoutes.js";
 import productRouter from "./routes/productRoutes.js";
 import userRouter from "./routes/userRoutes.js";
 import orderRouter from "./routes/orderRoutes.js";
-import cors from "cors";
+// import cors from "cors";
 
 dotenv.config();
 
@@ -22,11 +22,11 @@ mongoose
 const app = express();
 
 // cors
-app.use(
-  cors({
-    origin: "*",
-  })
-);
+// app.use(
+//   cors({
+//     origin: "*",
+//   })
+// );
 
 // to convert form data into json data in req.body
 app.use(express.json());
