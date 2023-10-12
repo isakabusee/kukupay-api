@@ -22,8 +22,11 @@ mongoose
 const app = express();
 
 // cors
-app.use(cors());
-app.options("*", cors());
+app.use(
+  cors({
+    origin: "*",
+  })
+);
 
 // to convert form data into json data in req.body
 app.use(express.json());
