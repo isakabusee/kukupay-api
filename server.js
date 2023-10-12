@@ -28,7 +28,10 @@ app.use(express.urlencoded({ extended: true }));
 // cors
 app.use(
   cors({
-    origin: "https://kukupay-ui-mquk2.ondigitalocean.app",
+    origin: [
+      "https://kukupay-ui-mquk2.ondigitalocean.app",
+      "http://localhost:3000",
+    ],
   })
 );
 
