@@ -21,13 +21,14 @@ mongoose
 
 const app = express();
 
+// cors
+app.use(cors());
+app.options("*", cors());
+
 // to convert form data into json data in req.body
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
-// cors
-app.use(cors());
-app.options("*", cors());
 // app.use(cors({
 //     origin: 'https://kukupay-ui-mquk2.ondigitalocean.app'
 //   }));
